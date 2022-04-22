@@ -1,0 +1,150 @@
+*, *::before, *::after {
+    /*border boxing*/
+    box-sizing: border-box;
+    font-family: 'Century Gothic';
+}
+
+/*Centering the body on screen*/
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(33, 41, 48);
+}
+
+/*Adding a background image */
+.banner {
+    width: 100%;
+    height:auto;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 800px;
+    /* So that at maximum it will only take up 80% of the screen */
+    max-width: 80%;
+    color: white;
+    background-color: rgb(33, 41, 48);
+    background-color: rgba(33, 41, 48, 0.5);
+    padding : 10px;
+    border-radius: 5px;
+    border-color: white;
+    box-shadow: 0 0 10px 2px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.btn-grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: hsl(200, 5%, 13%);
+    border: 1px solid hsl(200, 100%, 99%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+    color: rgb(255, 0, 0);
+}
+
+.stats {
+    margin-top: 10px;
+    color: aqua;
+}
+
+.header {
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    line-height: 25px;
+}
+
+.footer {
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding-top: 50px;
+    position: relative;
+}
+.navbar ul li a{
+    list-style: none;
+    display: inline-block;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+/*Line creation affect */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(224, 226, 198);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.player {
+    color: beige;
+}
+
+.textbox {
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
